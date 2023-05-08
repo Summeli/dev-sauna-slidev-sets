@@ -15,16 +15,13 @@
 
 ## Javascript - Gotchas
 
-<div class="mt-20 flex">
+<div class="mt-10 flex">
   <ul v-click class="flex-1">
     <li>Strict comparasions ===</li>
     <li> 1 == '1' returns true, with strict operand 1 === '1' is false</li>
     <li>Typescript to the rescue</li>
     <li>Compiler warnings for using == etc</li>
-  </ul>
-
-  <ul v-click class="flex-1">
-    <li>Typescript script mode will require everythin to be</li>
+    <li>Typescript strict mode will require everythin to be written with types</li>
   </ul>
 </div>
 
@@ -39,6 +36,7 @@
   </ul>
 
   <ul v-click class="flex-1">
+    <li>Introduction to Types and Interfaces</li>
     <li>Real world use cases</li>
     <li>Meta typing</li>
   </ul>
@@ -180,13 +178,10 @@ const user3: User = { id: 'B', name: 'Tester' }
 
 ---
 
-## Types vs Interfaces 1/3
+## Types vs Interfaces 1/2
 
 <div class="mt-10 flex">
-  <ul class="flex-1">
-    <li>What's the difference?</li>
-    <li>Objects can go though types or interfaces to the function</li>
-  </ul>
+  Interfaces specify the syntax that each entity must follow. (I'll come back to this later). Objects can go though types or interfaces to the function. The basic use-case has no difference.
 </div>
 
 <div class="mt-10 flex">
@@ -220,6 +215,52 @@ function greet(person: Person) {
 ```
 
   </div></div>
+
+---
+
+## Interfaces vs. Type Aliases
+<div class="mt-10 flex">
+  <div class="flex-1">
+
+```ts {monaco}
+import { getBear } from 'example-types'
+
+interface Animal {
+  name: string
+}
+
+interface Bear extends Animal {
+  honey: boolean
+}
+
+const bear = getBear();
+bear.name
+bear.honey
+
+```
+
+  </div>
+
+  <div v-click class="flex-1 pl-1rem">
+
+```ts {monaco}
+import { getBear } from 'example-types'
+
+type Animal = {
+  name: string
+}
+
+type Bear = Animal & { 
+  honey: Boolean 
+}
+
+const bear = getBear();
+bear.name;
+bear.honey;
+```
+
+  </div>
+</div>
 
 ---
 

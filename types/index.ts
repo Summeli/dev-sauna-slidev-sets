@@ -69,6 +69,10 @@ function get<Path extends string>(
 
 export const rest = { get }
 
+/* type vs interfcaces */
+function getBear(): any { 
+  return { name: "Bear", age: 10 }  // OK 
+}
 /* Tic tac toe */
 export type TicTacToe<
   MovesOrNextBoard extends Board | Turn[], // On initial round this will be a Turn[], on next rounds it will be a Board with some moves done
