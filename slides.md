@@ -1,4 +1,36 @@
-# Typescript Type System
+# Typescript - Optional Typesystem for Javascript
+
+<div class="mt-20 flex">
+  <ul v-click class="flex-1">
+    <li>Typesafety to Javascript with optional typesystem</li>
+    <li>Compiles to Javascript</li>
+  </ul>
+
+  <ul v-click class="flex-1">
+    <li>you can rename js to ts, and it's valid typescript</li>
+  </ul>
+</div>
+
+---
+
+## Javascript - Gotchas
+
+<div class="mt-20 flex">
+  <ul v-click class="flex-1">
+    <li>Strict comparasions ===</li>
+    <li> 1 == '1' returns true, with strict operand 1 === '1' is false</li>
+    <li>Typescript to the rescue</li>
+    <li>Compiler warnings for using == etc</li>
+  </ul>
+
+  <ul v-click class="flex-1">
+    <li>Typescript script mode will require everythin to be</li>
+  </ul>
+</div>
+
+---
+
+## Typescript Type System
 
 <div class="mt-20 flex">
   <ul v-click class="flex-1">
@@ -145,6 +177,49 @@ const user3: User = { id: 'B', name: 'Tester' }
   </div>
   </div>
 </div>
+
+---
+
+## Types vs Interfaces 1/3
+
+<div class="mt-10 flex">
+  <ul class="flex-1">
+    <li>What's the difference?</li>
+    <li>Objects can go though types or interfaces to the function</li>
+  </ul>
+</div>
+
+<div class="mt-10 flex">
+  <div v-click class="flex-1">
+
+```ts {monaco}
+interface Person {
+  name: string;
+  age: number;
+}
+ 
+function greet(person: Person) {
+  return "Hello " + person.name;
+}
+
+```
+ </div></div>
+
+<div class="mt-10 flex">
+  <div v-click class="flex-1">
+
+```ts {monaco}
+type Person = {
+  name: string;
+  age: number;
+};
+ 
+function greet(person: Person) {
+  return "Hello " + person.name;
+}
+```
+
+  </div></div>
 
 ---
 
