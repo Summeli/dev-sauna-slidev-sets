@@ -48,7 +48,7 @@
 ## Typescript Basic Syntax
 
 <div class="mt-10 flex">
-  Pretty similar to Kotlin
+  It's JavaScript with types. Pretty similar to Kotlin
 </div>
 
 <v-click>
@@ -125,10 +125,6 @@ const person: { name: string, age: number } = { name: "John Doe", age: 100 };
 <v-click>
 
 ```ts {monaco}
-
-
-
-
 const count: number = "John Doe";
 const userName: string = 1;
 ```
