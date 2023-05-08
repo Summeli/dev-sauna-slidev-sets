@@ -36,7 +36,6 @@
   </ul>
 
   <ul v-click class="flex-1">
-    <li>Introduction to Types and Interfaces</li>
     <li>Real world use cases</li>
     <li>Meta typing</li>
   </ul>
@@ -178,88 +177,13 @@ const user3: User = { id: 'B', name: 'Tester' }
 
 ---
 
-## Types vs Interfaces 1/2
+## Type Inference - TL;DR
 
 <div class="mt-10 flex">
-  Interfaces specify the syntax that each entity must follow. (I'll come back to this later). Objects can go though types or interfaces to the function. The basic use-case has no difference.
-</div>
-
-<div class="mt-10 flex">
-  <div v-click class="flex-1">
-
-```ts {monaco}
-interface Person {
-  name: string;
-  age: number;
-}
- 
-function greet(person: Person) {
-  return "Hello " + person.name;
-}
-
-```
- </div></div>
-
-<div class="mt-10 flex">
-  <div v-click class="flex-1">
-
-```ts {monaco}
-type Person = {
-  name: string;
-  age: number;
-};
- 
-function greet(person: Person) {
-  return "Hello " + person.name;
-}
-```
-
-  </div></div>
-
----
-
-## Interfaces vs. Type Aliases
-<div class="mt-10 flex">
-  <div class="flex-1">
-
-```ts {monaco}
-import { getBear } from 'example-types'
-
-interface Animal {
-  name: string
-}
-
-interface Bear extends Animal {
-  honey: boolean
-}
-
-const bear = getBear();
-bear.name
-bear.honey
-
-```
-
-  </div>
-
-  <div v-click class="flex-1 pl-1rem">
-
-```ts {monaco}
-import { getBear } from 'example-types'
-
-type Animal = {
-  name: string
-}
-
-type Bear = Animal & { 
-  honey: Boolean 
-}
-
-const bear = getBear();
-bear.name;
-bear.honey;
-```
-
-  </div>
+  <ul v-click class="flex-1">
+    <li>Type annotation: We explicitly tell TypeScript the type</li>
+    <li>Type inference: TypeScript figures out the type implicitly</li>
+  </ul>
 </div>
 
 ---
