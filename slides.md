@@ -8,6 +8,7 @@
 
   <ul v-click class="flex-1">
     <li>you can rename js to ts, and it's valid typescript</li>
+    <li>fun fact: these slides are made with typescript</li>
   </ul>
 </div>
 
@@ -22,7 +23,7 @@
     <li>Typescript to the rescue</li>
     <li>Compiler warnings for using == etc</li>
     <li>Typescript strict mode will require everythin to be written with types</li>
-    <li>fun fact: these slides are made with typescript</li>
+    <li>...just google for javascript rants. List goes on and on..</li>
   </ul>
 </div>
 
