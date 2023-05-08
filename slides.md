@@ -45,6 +45,58 @@
 
 ---
 
+## Typescript Basic Syntax
+
+<div class="mt-10 flex">
+  Pretty similar to Kotlin
+</div>
+
+<v-click>
+
+```ts {monaco}
+function reverse(s: String): String {
+  return s.split("").reverse().join("");
+}
+ 
+reverse("hello world");
+```
+
+</v-click>
+
+---
+
+## StrictNullChecks on
+
+Typescript will throw errors if null is not checked
+
+```ts {monaco}
+
+function doSomething(x: string | null) {
+  if (x === null) {
+    // do nothing
+  } else {
+    console.log("Hello, " + x.toUpperCase());
+  }
+}
+```
+
+<v-click>
+
+Non-null Assertion Operator (Postfix!)
+
+The nullcheck can be disabled with ! operator
+
+```ts {monaco}
+function liveDangerously(x?: number | null) {
+  // No error
+  console.log(x!.toFixed());
+}
+```
+
+</v-click>
+
+---
+
 ## Basic types 1/3
 
 <div class="mt-20"></div>
