@@ -22,6 +22,7 @@
     <li>Typescript to the rescue</li>
     <li>Compiler warnings for using == etc</li>
     <li>Typescript strict mode will require everythin to be written with types</li>
+    <li>fun fact: these slides are made with typescript</li>
   </ul>
 </div>
 
