@@ -63,6 +63,18 @@ reverse("hello world");
 
 </v-click>
 
+<v-click>
+
+Another example with defined return types -1, 0, 1
+
+```ts {monaco}
+function compare(a: string, b: string): -1 | 0 | 1 {
+  return a === b ? 0 : a > b ? 1 : -1;
+}
+
+```
+</v-click>
+
 ---
 
 ## StrictNullChecks on
