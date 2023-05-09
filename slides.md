@@ -48,7 +48,7 @@
 ## Typescript Basic Syntax
 
 <div class="mt-10 flex">
-  It's JavaScript with types. Pretty similar to Kotlin
+  It's JavaScript with types. Pretty similar to Kotlin   
 </div>
 
 <v-click>
@@ -91,7 +91,6 @@ function doSomething(x: string | null) {
   }
 }
 ```
-
 <v-click>
 
 Non-null Assertion Operator (Postfix!)
@@ -106,6 +105,29 @@ function liveDangerously(x?: number | null) {
 ```
 
 </v-click>
+---
+
+## There's always a way out
+
+Typescript is optional type system on top of javascript. The typecheck can be bypassed.
+
+Cast to any type
+```ts {monaco}
+import { getFoo } from "example-types";
+let foo = getFoo() as any;
+
+```
+
+Or disable typescheck completely
+
+```ts {monaco}
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-nocheck
+
+console.log('no errors' / 0);
+console.log('no errors' / 0);
+
+```
 
 ---
 

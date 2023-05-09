@@ -5,6 +5,11 @@ export interface User {
   someOtherId: string;
 }
 
+/* just something to cast into any */
+export function getFoo(): User{
+  return null as any;
+}
+
 export function Equals<Expected, Actual extends Expected>(_: Expected, __: Actual) { }
 
 
