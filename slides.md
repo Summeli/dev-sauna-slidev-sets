@@ -131,7 +131,7 @@ console.log('no errors' / 0);
 
 ---
 
-## Basic types 1/3
+## Basic types 1/4
 
 <div class="mt-20"></div>
 
@@ -155,7 +155,7 @@ const userName: string = 1;
 
 ---
 
-## Basic types 2/3
+## Basic types 2/4
 
 <div class="mt-10 flex">
   <div class="flex-1">
@@ -202,10 +202,49 @@ type Currency = EuropeanCurrency | NorthAmericanCurrency
   </div>
 </div>
 
-
 ---
 
-## Basic types 3/3
+## Basic types 3/4
+
+<div class="mt-10 flex">
+  <div class="flex-1">
+  Declaeration mergin exclusive to intrafaces
+
+```ts
+interface User { name: string; }
+
+interface User {age: number;}
+
+const pekka: Client = {
+    name: 'Pekka',
+    age: 4
+}
+```
+ </div>
+
+  <div class="flex-1 pl-1rem">
+  <div v-click>
+
+Extending interfaces is clean way to extend types / interfaces
+```ts
+interface Empoloyee extends User {salary: number }
+
+```
+  </div>
+<div v-click>
+
+Same could be done with intersections
+```ts
+type Employee = User & {salary: number};
+
+```
+</div>
+  </div>
+
+  </div>
+---
+
+## Basic types 4/4
 
 <div class="mt-10 flex">
   <div class="flex-1">
@@ -265,6 +304,7 @@ const user3: User = { id: 'B', name: 'Tester' }
 
 <div class="mt-10 flex">
   <ul v-click class="flex-1">
+    <li>Interfaces are "left behind". Types are more expressive, and the feature set will grow with new Typescript versions</li>
     <li>Type annotation: We explicitly tell TypeScript the type</li>
     <li>Type inference: TypeScript figures out the type implicitly</li>
   </ul>
